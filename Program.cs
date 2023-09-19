@@ -9,6 +9,8 @@ Console.WriteLine("Met welk type iteratie moet de berekening gebeuren?");
 Console.WriteLine("1. For loop");
 Console.WriteLine("2. While loop");
 Console.WriteLine("3. Do-While loop");
+Console.WriteLine("4. Recursie");
+
 
 Console.WriteLine("Geef jij  keuze");
 
@@ -51,8 +53,25 @@ switch (keuze)
     } while (i <= getal);
     break;
 
+    case '4':
+
+        nFaculteit = BerekenFaculteit(getal);
+
+
+    break;
+
 }
 
 Console.WriteLine(getal + "!= " + nFaculteit);
+
+int BerekenFaculteit (int getal)
+{
+    if (getal == 1) 
+        return 1; 
+        return getal * BerekenFaculteit(getal - 1);
+    }
+
+
+
 
 
